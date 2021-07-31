@@ -1,0 +1,6 @@
+include ':bingoimageloader'
+include ':bingoutils'
+include ':bingolog'
+include ':bingohttp'
+include ':app'
+rootProject.name = "BingoPublic"
