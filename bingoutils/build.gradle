@@ -15,7 +15,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -35,6 +35,12 @@ android {
         jvmTarget = '1.8'
     }
 }
+ext {
+    artifact = 'bingoutils'
+    libraryName ='bingo-sdk'
+    libraryDescription = '发布包的描述'
+    libraryVersion = '0.0.1'
+}
 
 dependencies {
 
@@ -46,3 +52,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+ext {
+    groupId = 'io.github.robin132929'
+    description = '全局耗时计算器，可以在任何地方计算耗时' //项目
+    gitUrl = 'https://github.com/Robin132929/BingoUtils' //Git地址，不包含.git
+    authorEmail = 'example@example.com' // 作者邮箱
+    license = 'MIT' //开源协议，可选
+}
+
+apply from: '../publish-mavencentral.gradle'
